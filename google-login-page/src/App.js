@@ -1,7 +1,7 @@
-import './App.css';
 import AuthPage from "./pages/AuthPage";
+import { Route, Routes } from "react-router-dom";
 
-function App() {
+const App = () => {
   return <AuthPage />
 }
 
