@@ -27,7 +27,7 @@ const Navbar2 = () => {
               {/*Login button*/} 
               <div>
                 <button className='hidden md:flex items-center py-2 px-2 rounded-full border-white bg-amber-400  text-white '>
-               <FcGoogle size={20} className='mr-2'/>Sign In
+               <FcGoogle size={20} className='mr-2'/>Sign In 
                 </button>
               </div>
 
