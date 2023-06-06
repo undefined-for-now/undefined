@@ -1,5 +1,7 @@
 FROM node:20.0.0-alpine
 
-WORKDIR /index
+WORKDIR /app
+
+COPY . ./
 
 CMD ["sh", "-c", "yarn install && yarn dev"]
