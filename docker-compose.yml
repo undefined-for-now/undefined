@@ -15,10 +15,10 @@ services:
 
   minigames-frontend:
     build:
-      context: ./game
+      context: ./frontend
       dockerfile: Dockerfile.dev
     container_name: minigames-frontend
     expose:
-      - '4000'
+      - '3000'
     ports:
-      - '4000:4000'
+      - '3000:3000'
