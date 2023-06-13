@@ -12,3 +12,13 @@ services:
       - '4000'
     ports:
       - '4000:4000'
+
+  minigames-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    container_name: minigames-frontend
+    expose:
+      - '3000'
+    ports:
+      - '3000:3000'
