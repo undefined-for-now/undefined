@@ -29,6 +29,46 @@ const Game = () => {
           </h2>
           <p>fksdjfdsjfoiwejjdskljckldsjdjfjeiwjfijkl</p>
         </div>
+        {/* comments */}
+        <div>
+          <h2 className="font-bold text-3xl text-black">Comments</h2>
+          <div className="bg-white w-full">
+            <ul className="mt-3 flex flex-col gap-3">
+              {[
+                {
+                  id: 1,
+                  content: "good game ever, perfect UI",
+                  writer: "Jeeex",
+                },
+                {
+                  id: 2,
+                  content: "bad game ever, perfect UI",
+                  writer: "Baddddddies",
+                },
+                {
+                  id: 3,
+                  content: "not so good game ever, perfect UI",
+                  writer: "Bdkdd",
+                },
+              ].map((item) => (
+                <li key={item.id} className="flex flex-col gap-1">
+                  {/* <span>{vote.writer}</span> */}
+                  <span className="px-5">{item.writer}</span>
+                  <p className="bg-yellow-100 rounded-3xl p-2 px-5 ">
+                    {item.content}
+                  </p>
+                  <div
+                    className="flex gap-2 items-center"
+                    onClick={() => {
+                      //   clickVoteLikeButton(vote);
+                    }}
+                    // data-id={item.id}
+                  ></div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>{" "}
       <div className="bg-yellow-400 w-96">
         {" "}

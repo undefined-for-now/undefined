@@ -60,7 +60,6 @@ const GamesCards = () => {
         {games.map((item, index) => (
           <Link to={`game/${item.id}`} key={item.id}>
             <div className="border shadow-lg hover:scale-105 duration-300 rounded-lg">
-              good
               <img
                 src={item.image}
                 alt={item.name}
