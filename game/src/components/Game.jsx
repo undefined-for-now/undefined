@@ -67,6 +67,22 @@ const Game = () => {
                 </li>
               ))}
             </ul>
+            <form
+              //   onSubmit={addComment}
+              method="post"
+              className="flex flex-col gap-2 bg-yellow-100 p-10"
+            >
+              <input
+                // ref={newCommentRef}
+                className="h-14 bg-white border-gray-500 rounded-md px-2 py-1"
+                type="text"
+                name="new_vote"
+                required
+              />
+              <button className="flex self-end rounded-lg px-3 py-1 text-md border-none bg-yellow-400 text-white">
+                ADD
+              </button>
+            </form>
           </div>
         </div>
       </div>{" "}
