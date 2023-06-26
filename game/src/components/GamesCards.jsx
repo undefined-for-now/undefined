@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { data } from "../data/data";
 
 const GamesCards = () => {
@@ -56,23 +57,23 @@ const GamesCards = () => {
       </div>
       {/* display games */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
-        {games.map((items, index) => (
-          <div
-            key={index}
-            className="border shadow-lg hover:scale-105 duration-300 rounded-lg"
-          >
-            <img
-              src={items.image}
-              alt={items.name}
-              className="w-full h-[200px] rounded-t-lg"
-            />
-            <div>
-              <p className="font-bold ">{items.name}</p>
-              <p>
-                <span> {"⭐".repeat(items.level)} </span>
-              </p>
+        {games.map((item, index) => (
+          <Link to={`game/${item.id}`} key={item.id}>
+            <div className="border shadow-lg hover:scale-105 duration-300 rounded-lg">
+              good
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-full h-[200px] rounded-t-lg"
+              />
+              <div>
+                <p className="font-bold ">{item.name}</p>
+                <p>
+                  <span> {"⭐".repeat(item.level)} </span>
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
