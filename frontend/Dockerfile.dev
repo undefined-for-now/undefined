@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY . ./
 
-CMD ["sh", "-c", "yarn install && yarn dev"]
+CMD ["sh", "-c", "yarn install && yarn start"]

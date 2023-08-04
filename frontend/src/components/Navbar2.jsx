@@ -32,7 +32,7 @@ const Navbar2 = () => {
         {/*Use mermaid style for more powerful style application*/}
         <a
           style={{"float": "right", "display": "flex"}} 
-          href="http://127.0.0.1:4000/login"
+          href="http://localhost:4000/login"
           className="w-[92.55px] hidden md:flex items-center py-2 px-2 rounded-full border-white bg-amber-400  text-white "
         >
           <FcGoogle size={20} className="mr-2" />
