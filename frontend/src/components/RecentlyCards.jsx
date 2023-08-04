@@ -9,7 +9,7 @@ const RecentlyCards = () => {
          {[0,1,2].map(() => (
             <div className='rounded-xl relative'>
                <div className='absolute w-full h-full bg-black/50 rounded-xl'>
-                  <button style={{"width": "135px"}} className='border-white bg-amber-400 text-white mx-2 absolute bottom-4'>GAME START</button>
+                  <button className='w-[135px] border-white bg-amber-400 text-white mx-2 absolute bottom-4'>GAME START</button>
                </div>
                <img
                   className='max-h-[160px] md:max-h-[500px] w-full object-cover rounded-xl'
