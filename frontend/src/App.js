@@ -9,7 +9,7 @@ import { BrowserRouter, Route, Routes, Switch } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
-      <div>
+      <div className="max-w-[1640px] center-screen">
         <Navbar2 />
         <Routes>
           <Route path="/" element={<Home />} />

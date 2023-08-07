@@ -22,7 +22,7 @@ const GamesCards = () => {
         {/* Filter Type */}
         <div>
           <p className="font-bold text-gray-700">Filter Type</p>
-          <div className="flex justify-between flex-wrap">
+          <div className="justify-between flex-wrap">
             <button
               onClick={() => setGames(data)}
               className="m-1 border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white"
@@ -43,7 +43,7 @@ const GamesCards = () => {
         {/* Filter level */}
         <div>
           <p className="font-bold text-gray-700">Filter level</p>
-          <div className="flex justify-between max-w-[390px] w-full">
+          <div className="justify-between max-w-[390px] w-full">
             {[1, 2, 3].map((level) => (
               <button
                 onClick={() => filterItems("level", level)}
@@ -63,7 +63,7 @@ const GamesCards = () => {
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-full h-[200px] rounded-t-lg"
+                className="w-full rounded-t-lg"
               />
               <div>
                 <p className="font-bold ">{item.name}</p>
