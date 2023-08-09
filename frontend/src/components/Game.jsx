@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useParams, Link } from "react-router-dom";
-// fake data
+// Dockup data
 import { data } from "../data/data";
+
+// Games
+import Candy_Crush from "./games/puzzle/candy_crush/components/Candy_Crush"
+
 
 const Game = () => {
   const { gameId } = useParams();
+
   //related games
   const [relatedGames, setRelatedGames] = useState(data);
+
+  const [gameStart, setGameStart] = useState(false);
 
   return (
     <div className="flex flex-row gap-5 w-screen justify-between bg-yellow-400 h-full">
@@ -14,12 +21,21 @@ const Game = () => {
       <div className="bg-yellow-200 w-full flex flex-col gap-3 p-4">
         {/* game screen */}
         <div className=" bg-yellow-100 w-full h-96 flex flex-col justify-center items-center gap-3">
-          <div className="font-semibold text-4xl text-Gameyellow-800">
-            GAME NAME{" "}
-          </div>
-          <button className="rounded-3xl text-white bg-yellow-400 px-4 py-2 border-none">
-            GAME START
-          </button>
+          {gameStart ? 
+            <Candy_Crush />
+            :
+            <>
+              <div className="font-semibold text-4xl text-Gameyellow-800">
+                {relatedGames[Number(gameId) - 1].name + " "}
+              </div>
+              <button 
+                className="rounded-3xl text-white bg-yellow-400 px-4 py-2 border-none"
+                onClick={() => {setGameStart(!gameStart);}}
+              >
+                GAME START
+              </button>
+            </> 
+          }
         </div>
         <div className="flex flex-col gap-2">
           <h2 className="font-semibold text-2xl text-yellow-800">Game name </h2>
